@@ -3,13 +3,16 @@
   "name": "lorem-ipsum",
   "description": "Lorem Ipsum",
   "author": "Evgeniy Skripkaru",
+  "homepage": "https://skripkaru.github.io/lorem-ipsum",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
     "lint": "npx eslint src/**/*.js --fix",
     "lint:css": "stylelint src/**/*.scss --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "lint-staged": {
     "*.js": [
@@ -32,6 +35,7 @@
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
     "image-minimizer-webpack-plugin": "^3.8.1",
