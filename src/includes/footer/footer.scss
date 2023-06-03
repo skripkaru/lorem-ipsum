@@ -1,0 +1,76 @@
+.footer {
+  min-height: 80px;
+  padding: 1.875rem 0;
+  font-size: 13px;
+  color: var(--white);
+  background-color: var(--bg-light);
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(xl) {
+      gap: 40px;
+    }
+  }
+
+  &__copy {
+    order: 1;
+    width: 100%;
+
+    @include media(lg) {
+      order: 0;
+      width: auto;
+    }
+  }
+
+  &__list,
+  &__contacts {
+    display: flex;
+    gap: 16px;
+
+    @include media(xl) {
+      gap: 38px;
+    }
+  }
+
+  &__list {
+    color: #C3C3C3;
+
+    &::before,
+    &::after {
+      content: '';
+      display: none;
+      width: 1px;
+      height: 18px;
+      background-color: currentcolor;
+
+      @include media(lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__list-icon,
+  &__contacts-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__list-item,
+  &__contacts-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    @include media(sm) {
+      gap: 0.625rem;
+    }
+  }
+}

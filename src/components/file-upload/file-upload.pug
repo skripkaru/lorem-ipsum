@@ -1,0 +1,7 @@
+mixin file-upload
+  div(class='file-upload js-file-upload')&attributes(attributes)
+    input(class='js-file' type='file' name='file' hidden=true aria-hidden=true)
+    a(class='js-file-select' class='btn btn--outline btn--full file-upload__btn' href='#')
+      +icon('file')
+      | Прикрепить файл
+  div(class='js-file-list' hidden=true)

@@ -1,0 +1,7 @@
+mixin stepper(items)
+  ul(class='stepper')&attributes(attributes)
+    each item in items
+      li(class='stepper__item')
+        div(class='stepper__item-icon')
+          +icon(item.icon)
+        =item.label

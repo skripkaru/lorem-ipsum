@@ -1,0 +1,64 @@
+.stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media(md) {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  &__item {
+    --size: 100px;
+    --gutter: 8px;
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    font-size: 16px;
+
+    @include media(md) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(var(--size) / 2);
+        left: calc(50% + calc(var(--size) / 2 + var(--gutter)));
+        display: none;
+        order: -1;
+        width: calc(100% - var(--size) - calc(var(--gutter) * 2));
+        height: 10px;
+        background: url("Icons/dots.svg") center / contain no-repeat;
+
+        @include media(md) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__item-icon {
+    --color: var(--white);
+    --border: var(--main-dark);
+    --background: var(--main);
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--background);
+    border: 5px solid var(--border);
+    border-radius: 50%;
+
+    @include media(md) {
+      margin: 0 auto;
+    }
+  }
+}

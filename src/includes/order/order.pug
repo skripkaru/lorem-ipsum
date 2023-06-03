@@ -1,0 +1,16 @@
+-
+  let steps = [
+    {label: 'Lorem ipsum dolorsit amet', icon: 'search'},
+    {label: 'Сonsecteturadipiscing elit', icon: 'percent'},
+    {label: 'Sed do eiusmod tempor', icon: 'subtract'},
+    {label: 'Esse cillum doloreeu fugiat', icon: 'mail'},
+    {label: 'Excepteur sint occaecat cupidatat non proident', icon: 'dollar'},
+  ]
+
+section(class='order')
+  div(class='container')
+    div(class='order__header')
+      h2(class='order__title title') Оформление #[span заказа]
+      p(class='order__label') Перед заполнением формы ознакомьтесь с нашей схемой работы!
+    +stepper(steps)(class='order__stepper')
+    +form

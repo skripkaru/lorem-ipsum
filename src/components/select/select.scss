@@ -1,0 +1,101 @@
+.ts-wrapper.single {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &.dropdown-active {
+    background-color: var(--bg-85);
+    border-radius: 3px 3px 0 0;
+
+    .ts-control {
+        color: var(--white);
+        background-color: var(--bg-85);
+        border: 1px solid var(--bg-light);
+
+      &::after {
+        background-image: url('Icons/chevron-down-white.svg');
+
+      }
+    }
+  }
+
+  .ts-control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0.625rem;
+    padding-right: 30px !important;
+    font-size: 1rem;
+    color: var(--bg);
+    background: rgb(255 255 255 / 85%);
+    border: 1px solid var(--white);
+    outline: none;
+    box-shadow: none;
+
+    @include media(md) {
+      font-size: 1.125rem;
+    }
+
+    &::after {
+      right: 8px;
+      width: 12px;
+      height: 12px;
+      margin-top: -5px;
+      background-image: url('Icons/chevron-down.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border: none;
+    }
+  }
+}
+
+.ts-dropdown {
+  z-index: 2;
+  margin: 0;
+  padding: 0.25rem 0;
+  background: var(--bg);
+  border: 1px solid var(--bg-85);
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+
+  .ts-dropdown-content {
+    max-height: 180px;
+  }
+
+  .option {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--white);
+    transition: color var(--transition);
+
+    @include media(md) {
+      font-size: 1.125rem;
+    }
+
+    &.active {
+      color: var(--main-dark);
+      background-color: transparent;
+    }
+
+    &.selected {
+      color: var(--main-light);
+      background-color: transparent;
+    }
+  }
+}
+
+.ts-dropdown, .ts-control, .ts-control input {
+  font: inherit;
+  color: inherit;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.ts-wrapper.single .ts-control,
+.ts-dropdown.single {
+  border-color: var(--bg-85);
+}
+
+

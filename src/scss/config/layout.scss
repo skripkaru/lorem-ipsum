@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.header,
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  --padding: 1rem;
+  max-width: calc(1168px + var(--padding) * 2);
+  margin: 0 auto;
+  padding: 0 var(--padding);
+
+  @include media(md) {
+    --padding: 2rem;
+  }
+}

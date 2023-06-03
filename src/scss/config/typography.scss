@@ -1,0 +1,53 @@
+h1,
+h2,
+h3,
+p {
+  margin: 1rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 28px;
+
+  @include media(md) {
+    font-size: 48px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+
+  @include media(md) {
+    font-size: 36px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+
+  @include media(md) {
+    font-size: 26px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+
+  span {
+    color: var(--main);
+  }
+}

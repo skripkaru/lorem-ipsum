@@ -1,0 +1,25 @@
+-
+  var list = [
+    {value: '', label: 'Выберите тип системы'},
+    {value: '0', label: 'Sed ut perspiciatis'},
+    {value: '1', label: 'Nemo enim ipsam'},
+    {value: '2', label: 'Et harum quidem'},
+    {value: '3', label: 'Temporibus autem'},
+    {value: '4', label: 'Itaque earum rerum'},
+    {value: '5', label: 'Itaque earum rerum'},
+    {value: '6', label: 'Itaque earum rerum'},
+    {value: '7', label: 'Itaque earum rerum'},
+    {value: '8', label: 'Itaque earum rerum'},
+  ]
+
+mixin form
+  form(class='form')
+    div(class='grid grid--col-3')
+      +select(list)(class='grid__item' autocomplete='off')
+      +input({type:'email', name:'email', placeholder: 'Ваш e-mail'})(class='grid__item')
+      +input({type:'text', name:'name', placeholder: 'Ваше имя'})(class='grid__item')
+      div(class='grid__item grid__item--span-2')
+        +range
+      +file-upload(class='grid__item')
+      +button(class='btn--fill grid__item grid__item--col-2') Отправить
+

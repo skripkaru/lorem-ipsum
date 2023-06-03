@@ -1,0 +1,4 @@
+mixin select(list)
+  select(class='js-select')&attributes(attributes)
+    each item in list
+      option(value=item.value)=item.label

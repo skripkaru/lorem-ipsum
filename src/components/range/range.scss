@@ -1,0 +1,50 @@
+.range {
+  &__header {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+
+    @include media(md) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__label {
+    font-weight: 400;
+    color: var(--white);
+  }
+
+  &__value {
+    font-weight: 600;
+    color: var(--white-85);
+    white-space: nowrap;
+  }
+}
+
+.noUi-target {
+  height: 6px;
+  background-color: rgb(255 255 255 / 70%);
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.noUi-handle {
+  background: var(--main-light);
+  border: 3px solid var(--main-dark);
+  border-radius: 50%;
+  box-shadow: none;
+
+  &::after,
+  &::before {
+    display: none;
+  }
+}
+
+.noUi-horizontal .noUi-handle {
+  top: -9px;
+  width: 24px;
+  height: 24px;
+}

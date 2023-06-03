@@ -1,0 +1,22 @@
+:root {
+  // Global
+  --font-family: 'Lato', sans-serif;
+  --font-size: 1rem;
+  --line-height: 1.2;
+  --border-radius: 4px;
+  --transition: 0.3s ease-in-out;
+
+  // Colors
+  --black: #000;
+  --white: #fff;
+  --white-85: rgb(255 255 255 / 85%);
+  --main-light: #42A9ED;
+  --main: #3e9cdc;
+  --main-dark: #286690;
+  --bg: #272733;
+  --bg-light: #3D4050;
+  --bg-85: rgb(61 64 80 / 85%);
+
+  // Other
+  --z-index-header: 100;
+}

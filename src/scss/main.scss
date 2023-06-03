@@ -1,0 +1,30 @@
+// Fonts
+@import 'https://fonts.googleapis.com/css2?family=Lato:wght@400;600;800&display=swap';
+
+// Vendors
+@import '~tom-select/dist/css/tom-select.default.css';
+@import '~nouislider/dist/nouislider.min.css';
+
+// Config
+@import "config/variables";
+@import "config/mixins";
+@import "config/global";
+@import 'config/typography';
+@import "config/layout";
+@import "config/grid";
+
+// Components
+@import "../components/icon/icon";
+@import "../components/button/button";
+@import "../components/stepper/stepper";
+@import "../components/form/form";
+@import "../components/input/input";
+@import "../components/file-upload/file-upload";
+@import "../components/select/select";
+@import "../components/range/range";
+
+// Includes
+@import "../includes/header/header";
+@import "../includes/footer/footer";
+@import "../includes/intro/intro";
+@import "../includes/order/order";

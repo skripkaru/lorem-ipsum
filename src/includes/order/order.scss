@@ -1,0 +1,35 @@
+.order {
+  padding: 3.75rem 0;
+  color: var(--white);
+  background-color: var(--bg);
+  background-image: url("Images/order.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media(md) {
+    padding: 7.5rem 0 9.375rem;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 1.875rem;
+  }
+
+  &__text {
+    font-size: 1.125rem;
+    color: #BBB;
+  }
+
+  &__header,
+  &__stepper {
+    margin-bottom: 2.5rem;
+
+    @include media(md) {
+      margin-bottom: 5rem;
+    }
+  }
+}

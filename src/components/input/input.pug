@@ -1,0 +1,15 @@
+mixin input(props)
+  div(class='input')&attributes(attributes)
+    input(
+      id=props.name
+      type=props.type ? props.type : 'text'
+      name=props.name
+      value=props.value
+      disabled=props.disabled
+      required=props.required
+      placeholder=props.label ? props.label : props.placeholder
+    )
+    if props.label
+      label(for=props.name)= props.label
+        if props.required
+          span *

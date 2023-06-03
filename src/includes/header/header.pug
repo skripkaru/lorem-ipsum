@@ -1,0 +1,20 @@
+-
+  var navbarLinks = [
+    {url: '#', label: 'Бизнес'},
+    {url: '#', label: 'О нас'},
+    {url: '#', label: 'Цены'},
+    {url: '#', label: 'Оформить заказ'},
+  ]
+
+header(class='header')
+  div(class='container')
+    div(class='header__inner')
+      a(class='logo' href='/')
+        img(src=require('Images/logo.svg') alt='LOREMIPSUM.NET')
+      button(class='header__menu-btn btn--text js-nav-open') Menu
+      nav(class='navbar js-navbar')
+        button(class='navbar__close btn btn--text js-nav-close') Close
+        ul(class='navbar__list')
+          each link in navbarLinks
+            li(class='navbar__list-item')
+              a(class='navbar__list-link' href=link.url)=link.label

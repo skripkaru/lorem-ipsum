@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+
+  &--col-2 {
+    grid-template-columns: 1fr;
+
+    @include media(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--col-3 {
+    grid-template-columns: 1fr;
+
+    @include media(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    &--col-2 {
+      grid-column: auto;
+
+      @include media(sm) {
+        grid-column: 2;
+      }
+    }
+
+    &--span-2 {
+      grid-column: auto;
+
+      @include media(sm) {
+        grid-column: span 2;
+      }
+    }
+
+    &--span-3 {
+      grid-column: auto;
+
+      @include media(sm) {
+        grid-column: span 3;
+      }
+    }
+  }
+}
