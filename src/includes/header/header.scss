@@ -34,7 +34,8 @@
 }
 
 .logo {
-  img {
+
+  &__img {
     width: 160px;
     height: 35px;
     object-fit: contain;

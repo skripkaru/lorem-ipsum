@@ -1,26 +1,28 @@
+-
+  var paymentMethods = [
+    {icon: 'qiwi-wallet', label: 'QIWI wallet'},
+    {icon: 'yandex-money', label: 'Yandex Money'},
+    {icon: 'web-money', label: 'Web Money'},
+  ]
+
+-
+  var contactLinks = [
+    {url: 'mailto:info@ipsum228.com', icon: 'email', label: 'info@ipsum228.com'},
+    {url: '#', icon: 'vk', label: 'Мы вконтакте'},
+  ]
+
 footer(class='footer')
   div(class='container')
     div(class='footer__inner')
       span(class='footer__copy') © 2018 «LOREMIPSUM.NET» Все права защищены.
       ul(class='footer__list')
-        li(class='footer__list-item')
-          span(class='footer__list-icon')
-            +icon('qiwi-wallet')
-          | QIWI wallet
-        li(class='footer__list-item')
-          span(class='footer__list-icon')
-            +icon('yandex-money')
-          | Yandex Money
-        li(class='footer__list-item')
-          span(class='footer__list-icon')
-            +icon('web-money')
-          | Web Money
+        each item in paymentMethods
+          li(class='footer__list-item')
+            +icon(item.icon)
+            =item.label
       div(class='footer__contacts')
-        a(class='footer__contacts-item' href='mailto:info@ipsum228.com')
-          span(class='footer__contacts-icon')
-            +icon('email')
-          | info@ipsum228.com
-        a(class='footer__contacts-item' href='#')
-          span(class='footer__contacts-icon')
-            +icon('vk')
-          | Мы вконтакте
+        each item in contactLinks
+          a(class='footer__contacts-item' href=item.url)
+            span(class='footer__contacts-icon')
+              +icon(item.icon)
+            =item.label
